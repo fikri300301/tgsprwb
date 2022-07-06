@@ -10,6 +10,7 @@ include 'nav.php';
 </head>
 
 <body>
+    <h1>MUHAMMAD FIKRI PRATAMA</h1>
     <?php include 'menu.php';?>
     <table width='80%' border='1'>
         <thead>
