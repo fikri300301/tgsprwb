@@ -27,11 +27,12 @@ $row = $res->fetch_array(MYSQLI_BOTH);
 			$sql = "SELECT * FROM mhs";
 			$res = $conn->query($sql);
 			while($mhs = $res->fetch_array(MYSQLI_BOTH)){
-				if($mhs['npm']==$row['mhs_npm'])
+				if($mhs['npm']==$row['mhs_npm']){
 					$select = 'selected="selected"';
-				else
+				}else{
 					$select = '';
-				echo "<option value='".$mhs['id']."' $select>".$mhs['npm']." - ".$mhs['nama']."</option>";
+				}
+				echo "<option value='".$mhs['npm']."' $select>".$mhs['npm']." - ".$mhs['nama']."</option>";
 			}
 		?>
         </select><br>
@@ -45,7 +46,7 @@ $row = $res->fetch_array(MYSQLI_BOTH);
 					$select = 'selected="selected"';
 				else
 					$select = '';
-				echo "<option value='".$mk['id']."' $select>".$mk['kode']." - ".$mk['nama']."</option>";
+				echo "<option value='".$mk['kode']."' $select>".$mk['kode']." - ".$mk['nama']."</option>";
 			}
 		?>
         </select><br>
